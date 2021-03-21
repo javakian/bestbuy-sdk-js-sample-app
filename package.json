@@ -7,7 +7,9 @@
     "postinstall": "bower install && gulp build",
     "start": "babel-node server.js",
     "watch": "nodemon --exec babel-node -- server.js",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -60,7 +62,8 @@
     "react-dom": "0.14.2",
     "react-router": "^0.13.0",
     "request": "^2.40.0",
-    "swig": "^1.4.2"
+    "swig": "^1.4.2",
+    "snyk": "^1.502.0"
   },
   "devDependencies": {
     "babel": "^6.1.18",
@@ -72,22 +75,23 @@
     "babel-preset-react": "^6.1.18",
     "babelify": "^7.2.0",
     "bower": "^1.4.1",
-    "browserify": "^11.2.0",
-    "gulp": "^3.9.0",
+    "browserify": "^12.0.0",
+    "gulp": "^4.0.0",
     "gulp-autoprefixer": "^2.3.1",
     "gulp-concat": "^2.6.0",
     "gulp-cssmin": "^0.1.7",
-    "gulp-if": "^1.2.5",
-    "gulp-less": "^3.0.3",
+    "gulp-if": "^2.0.0",
+    "gulp-less": "^4.0.0",
     "gulp-plumber": "^1.0.1",
     "gulp-streamify": "0.0.5",
     "gulp-uglify": "^1.2.0",
     "gulp-util": "^3.0.6",
     "jest": "^0.1.40",
-    "jest-cli": "^0.7.1",
-    "nodemon": "^1.7.1",
+    "jest-cli": "^19.0.0",
+    "nodemon": "^2.0.0",
     "react-addons-test-utils": "0.14.2",
     "vinyl-source-stream": "^1.1.0",
-    "watchify": "^3.4.0"
-  }
+    "watchify": "^4.0.0"
+  },
+  "snyk": true
 }
