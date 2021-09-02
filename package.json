@@ -7,7 +7,9 @@
     "postinstall": "bower install && gulp build",
     "start": "babel-node server.js",
     "watch": "nodemon --exec babel-node -- server.js",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -60,7 +62,8 @@
     "react-dom": "0.14.2",
     "react-router": "^0.13.0",
     "request": "^2.40.0",
-    "swig": "^1.4.2"
+    "swig": "^1.4.2",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "babel": "^6.1.18",
@@ -73,7 +76,7 @@
     "babelify": "^7.2.0",
     "bower": "^1.4.1",
     "browserify": "^11.2.0",
-    "gulp": "^3.9.0",
+    "gulp": "^4.0.0",
     "gulp-autoprefixer": "^2.3.1",
     "gulp-concat": "^2.6.0",
     "gulp-cssmin": "^0.1.7",
@@ -89,5 +92,6 @@
     "react-addons-test-utils": "0.14.2",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.4.0"
-  }
+  },
+  "snyk": true
 }
