@@ -85,7 +85,7 @@
     "gulp-util": "^3.0.6",
     "jest": "^0.1.40",
     "jest-cli": "^0.7.1",
-    "nodemon": "^1.7.1",
+    "nodemon": "^2.0.3",
     "react-addons-test-utils": "0.14.2",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.4.0"
